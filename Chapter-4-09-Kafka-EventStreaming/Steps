@@ -1,0 +1,13 @@
+Start Apache Zookeeper-
+C:\kafka_2.12-2.4.1>.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+Start Apache Kafka-
+C:\kafka_2.12-2.4.1>.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+
+Next start the Spring Boot Application by running it as a Java Application.
+
+Also Start the consumer listening to the java_in_use_topic-
+C:\kafka_2.12-0.10.2.1>.\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic my_topic --from-beginning
+
+Hit the url as follows- http://localhost:8080/api/producer?message=hellohello
